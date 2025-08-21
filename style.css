@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.memory-card {
+    transition: all 0.3s ease;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+.memory-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05), 0 4px 6px -2px rgba(0,0,0,0.03);
+}
+
+.audio-player {
+    width: 100%;
+    background: linear-gradient(to right, #0ea5e9, #7c3aed);
+    border-radius: 12px;
+}
+
+.floating-btn {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    box-shadow: 0 10px 15px -3px rgba(14, 165, 233, 0.3), 0 4px 6px -2px rgba(14, 165, 233, 0.2);
+    transition: all 0.3s ease;
+}
+.floating-btn:hover {
+    transform: scale(1.05);
+}
+
+.file-upload-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #e2e8f0;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #f8fafc;
+}
+.file-upload-label:hover {
+    border-color: #0ea5e9;
+    background-color: #f0f9ff;
+}
+
+.tab-content {
+    display: none;
+    animation: fadeIn 0.3s ease;
+}
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.nav-tab {
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+.nav-tab.active:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #0ea5e9;
+    border-radius: 1px;
+}
+
+.avatar-ring {
+    box-shadow: 0 0 0 2px white, 0 0 0 4px #0ea5e9;
+}
+
+.wave-pattern {
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M54.627 0c.745 1.789 1.146 3.748 1.146 5.784 0 2.036-.401 3.995-1.146 5.785l-1.722 4.134c-.745 1.789-1.146 3.748-1.146 5.784 0 2.037.401 3.995 1.146 5.785l1.722 4.134c.745 1.789 1.146 3.748 1.146 5.784 0 2.037-.401 3.995-1.146 5.785l-1.722 4.134c-.745 1.789-1.146 3.748-1.146 5.784 0 2.037.401 3.995 1.146 5.785l1.722 4.134c.745 1.789 1.146 3.748 1.146 5.784 0 1.784-.299 3.501-.85 5.105L54.627 0zM5.373 0l-.85 5.105C3.973 6.709 3.674 8.426 3.674 10.21c0 2.036.401 3.995 1.146 5.785l1.722 4.134c.745 1.789 1.146 3.748 1.146 5.784 0 2.037-.401 3.995-1.146 5.785l-1.722 4.134c-.745 1.789-1.146 3.748-1.146 5.784 0 2.037.401 3.995 1.146 5.785l1.722 4.134c.745 1.789 1.146 3.748 1.146 5.784 0 2.037-.401 3.995-1.146 5.785l-1.722 4.134c-.745 1.789-1.146 3.748-1.146 5.784 0 1.784.299 3.501.85 5.105L5.373 0z' fill='%23f0f9ff' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
